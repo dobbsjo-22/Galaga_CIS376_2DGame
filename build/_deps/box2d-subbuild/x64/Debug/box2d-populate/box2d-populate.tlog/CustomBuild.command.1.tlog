@@ -1,0 +1,150 @@
+^C:\USERS\JOSH.DOBBS\DESKTOP\SCHOO\376 GAME\BOUNCINGBALLS\BUILD\_DEPS\BOX2D-SUBBUILD\CMAKEFILES\47BDD1DEAFF717E37E342D411904B92D\BOX2D-POPULATE-MKDIR.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P "C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/box2d-populate-prefix/tmp/box2d-populate-mkdirs.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/Debug/box2d-populate-mkdir"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JOSH.DOBBS\DESKTOP\SCHOO\376 GAME\BOUNCINGBALLS\BUILD\_DEPS\BOX2D-SUBBUILD\CMAKEFILES\47BDD1DEAFF717E37E342D411904B92D\BOX2D-POPULATE-DOWNLOAD.RULE
+setlocal
+cd "C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P "C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/box2d-populate-prefix/tmp/box2d-populate-gitclone.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/Debug/box2d-populate-download"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JOSH.DOBBS\DESKTOP\SCHOO\376 GAME\BOUNCINGBALLS\BUILD\_DEPS\BOX2D-SUBBUILD\CMAKEFILES\47BDD1DEAFF717E37E342D411904B92D\BOX2D-POPULATE-UPDATE.RULE
+setlocal
+cd "C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\box2d-src"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P "C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/box2d-populate-prefix/tmp/box2d-populate-gitupdate.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JOSH.DOBBS\DESKTOP\SCHOO\376 GAME\BOUNCINGBALLS\BUILD\_DEPS\BOX2D-SUBBUILD\CMAKEFILES\47BDD1DEAFF717E37E342D411904B92D\BOX2D-POPULATE-PATCH.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/Debug/box2d-populate-patch"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JOSH.DOBBS\DESKTOP\SCHOO\376 GAME\BOUNCINGBALLS\BUILD\_DEPS\BOX2D-SUBBUILD\CMAKEFILES\47BDD1DEAFF717E37E342D411904B92D\BOX2D-POPULATE-CONFIGURE.RULE
+setlocal
+cd "C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\box2d-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/Debug/box2d-populate-configure"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JOSH.DOBBS\DESKTOP\SCHOO\376 GAME\BOUNCINGBALLS\BUILD\_DEPS\BOX2D-SUBBUILD\CMAKEFILES\47BDD1DEAFF717E37E342D411904B92D\BOX2D-POPULATE-BUILD.RULE
+setlocal
+cd "C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\box2d-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/Debug/box2d-populate-build"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JOSH.DOBBS\DESKTOP\SCHOO\376 GAME\BOUNCINGBALLS\BUILD\_DEPS\BOX2D-SUBBUILD\CMAKEFILES\47BDD1DEAFF717E37E342D411904B92D\BOX2D-POPULATE-INSTALL.RULE
+setlocal
+cd "C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\box2d-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/Debug/box2d-populate-install"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JOSH.DOBBS\DESKTOP\SCHOO\376 GAME\BOUNCINGBALLS\BUILD\_DEPS\BOX2D-SUBBUILD\CMAKEFILES\47BDD1DEAFF717E37E342D411904B92D\BOX2D-POPULATE-TEST.RULE
+setlocal
+cd "C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\box2d-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/Debug/box2d-populate-test"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JOSH.DOBBS\DESKTOP\SCHOO\376 GAME\BOUNCINGBALLS\BUILD\_DEPS\BOX2D-SUBBUILD\CMAKEFILES\C3DA10C29A87E94D83FA60BEFCFEF5D2\BOX2D-POPULATE-COMPLETE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/CMakeFiles/Debug"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/CMakeFiles/Debug/box2d-populate-complete"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/Debug/box2d-populate-done"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JOSH.DOBBS\DESKTOP\SCHOO\376 GAME\BOUNCINGBALLS\BUILD\_DEPS\BOX2D-SUBBUILD\CMAKEFILES\838C40E36A2A471C8DB64A3429098970\BOX2D-POPULATE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JOSH.DOBBS\DESKTOP\SCHOO\376 GAME\BOUNCINGBALLS\BUILD\_DEPS\BOX2D-SUBBUILD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild" "-BC:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild" --check-stamp-file "C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

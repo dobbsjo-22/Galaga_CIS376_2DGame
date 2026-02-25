@@ -1,0 +1,14 @@
+# Target labels
+ box2d-populate
+# Source files and their labels
+C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/CMakeFiles/box2d-populate
+C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/CMakeFiles/838c40e36a2a471c8db64a3429098970/box2d-populate.rule
+C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/CMakeFiles/c3da10c29a87e94d83fa60befcfef5d2/box2d-populate-complete.rule
+C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/CMakeFiles/47bdd1deaff717e37e342d411904b92d/box2d-populate-build.rule
+C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/CMakeFiles/47bdd1deaff717e37e342d411904b92d/box2d-populate-configure.rule
+C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/CMakeFiles/47bdd1deaff717e37e342d411904b92d/box2d-populate-download.rule
+C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/CMakeFiles/47bdd1deaff717e37e342d411904b92d/box2d-populate-install.rule
+C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/CMakeFiles/47bdd1deaff717e37e342d411904b92d/box2d-populate-mkdir.rule
+C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/CMakeFiles/47bdd1deaff717e37e342d411904b92d/box2d-populate-patch.rule
+C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/CMakeFiles/47bdd1deaff717e37e342d411904b92d/box2d-populate-test.rule
+C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-subbuild/CMakeFiles/47bdd1deaff717e37e342d411904b92d/box2d-populate-update.rule

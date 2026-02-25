@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\sdl3-subbuild\CMakeFiles\077d1e4a9beec21f3d39018463881971\sdl3-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\sdl3-subbuild\CMakeFiles\077d1e4a9beec21f3d39018463881971\sdl3-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\sdl3-subbuild\CMakeFiles\077d1e4a9beec21f3d39018463881971\sdl3-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\sdl3-subbuild\CMakeFiles\077d1e4a9beec21f3d39018463881971\sdl3-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\sdl3-subbuild\CMakeFiles\077d1e4a9beec21f3d39018463881971\sdl3-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\sdl3-subbuild\CMakeFiles\077d1e4a9beec21f3d39018463881971\sdl3-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\sdl3-subbuild\CMakeFiles\077d1e4a9beec21f3d39018463881971\sdl3-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\sdl3-subbuild\CMakeFiles\077d1e4a9beec21f3d39018463881971\sdl3-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\sdl3-subbuild\CMakeFiles\0d840fc55a63f6117fe6b2f99ae00cde\sdl3-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\sdl3-subbuild\CMakeFiles\a279045123a37f06f4098380c8294dbb\sdl3-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\sdl3-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\_deps\sdl3-subbuild\CMakeFiles\sdl3-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{58EDEEF1-3470-3B48-BE63-A64FCC8A9C49}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\build\CMakeFiles\48c27324e0e5753c86f75451c0dba69a\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A748767D-A611-34D3-911C-AEEC1F83F4FD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
