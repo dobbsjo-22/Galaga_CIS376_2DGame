@@ -1,13 +1,9 @@
-C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/CMakeFiles/main.dir
-C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/CMakeFiles/INSTALL.dir
-C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/CMakeFiles/ZERO_CHECK.dir
-C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/sdl3-build/CMakeFiles/SDL3-static.dir
-C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/sdl3-build/CMakeFiles/SDL3_test.dir
-C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/sdl3-build/CMakeFiles/SDL_uclibc.dir
-C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/sdl3-build/CMakeFiles/INSTALL.dir
-C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/sdl3-build/CMakeFiles/ALL_BUILD.dir
-C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-build/CMakeFiles/INSTALL.dir
-C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-build/CMakeFiles/ALL_BUILD.dir
-C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-build/src/CMakeFiles/box2d.dir
-C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-build/src/CMakeFiles/INSTALL.dir
+C:/Users/barth/Galaga_CIS376_2DGame/build/CMakeFiles/main.dir
+C:/Users/barth/Galaga_CIS376_2DGame/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/barth/Galaga_CIS376_2DGame/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/barth/Galaga_CIS376_2DGame/build/vendored/SDL/CMakeFiles/SDL3-shared.dir
+C:/Users/barth/Galaga_CIS376_2DGame/build/vendored/SDL/CMakeFiles/SDL3_test.dir
+C:/Users/barth/Galaga_CIS376_2DGame/build/vendored/SDL/CMakeFiles/SDL_uclibc.dir
+C:/Users/barth/Galaga_CIS376_2DGame/build/vendored/SDL/CMakeFiles/ALL_BUILD.dir
+C:/Users/barth/Galaga_CIS376_2DGame/build/vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir
+C:/Users/barth/Galaga_CIS376_2DGame/build/vendored/SDL_image/CMakeFiles/ALL_BUILD.dir

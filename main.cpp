@@ -19,12 +19,12 @@ public:
 
     bool init(const char* title, int width, int height) {
         if (!SDL_Init(SDL_INIT_VIDEO)) return false;
-        window = SDL_CreateWindow(title, width, height, 0);
+        window = SDL_CreateWindow(title, width, height, SDL_WINDOW_FULLSCREEN);
         renderer = SDL_CreateRenderer(window, NULL);
 
         // this makes the enemies
         for (int i = 0; i < 5; ++i) {
-            enemies.push_back(Enemy(150.0f + (i * 100.0f), 50.0f));
+            enemies.emplace_back(150.0f + (i * 100.0f),50.0f,"enemy.png");
         }
 
         isRunning = true;
