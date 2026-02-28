@@ -5,13 +5,13 @@
       <FullPath>C:\Users\barth\Galaga_CIS376_2DGame\build\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\barth\Galaga_CIS376_2DGame\build\vendored\SDL\Debug\SDL3.dll</FullPath>
+      <FullPath>C:\Users\barth\Galaga_CIS376_2DGame\game-items\Debug\SDL3.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\barth\Galaga_CIS376_2DGame\build\vendored\SDL_image\Debug\SDL3_image.dll</FullPath>
+      <FullPath>C:\Users\barth\Galaga_CIS376_2DGame\game-items\Debug\SDL3_image.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\barth\Galaga_CIS376_2DGame\build\Debug\main.exe</FullPath>
+      <FullPath>C:\Users\barth\Galaga_CIS376_2DGame\game-items\Debug\main.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\Users\barth\Galaga_CIS376_2DGame\build\x64\Debug\ALL_BUILD</FullPath>

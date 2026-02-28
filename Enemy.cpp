@@ -43,7 +43,6 @@ void Enemy::update(float speed) {
 
 void Enemy::render(SDL_Renderer* renderer) {
 
-    // Lazy-load texture the first time we render
     if (!texture) {
         texture = getTexture(renderer, spritePath);
     }
