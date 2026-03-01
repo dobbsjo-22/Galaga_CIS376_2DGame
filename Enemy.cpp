@@ -7,7 +7,9 @@ SDL_Texture* Enemy::getTexture(SDL_Renderer* renderer,const std::string& path) {
     if (it != textureCache.end())
         return it->second;
 
-    SDL_Surface* surface = IMG_Load(path.c_str());
+    const char* base = SDL_GetBasePath(); // folder containing the executable
+    std::string fullPath = std::string(base) + "enemy.png";
+    SDL_Surface* surface = IMG_Load(fullPath.c_str());
     if (!surface) {
         SDL_Log("IMG_Load failed for %s: %s", path.c_str(), SDL_GetError());
         return nullptr;
