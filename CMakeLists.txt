@@ -1,16 +1,22 @@
 cmake_minimum_required(VERSION 3.20)
-project(BouncingBalls CXX)
- 
+project(Galaga_CIS376_2DGame LANGUAGES CXX)
+
 set(CMAKE_CXX_STANDARD 17)
- 
-include(FetchContent)
- 
-# SDL3
-FetchContent_Declare(
-    SDL3
-    GIT_REPOSITORY https://github.com/libsdl-org/SDL.git
-    GIT_TAG        release-3.2.8
-    GIT_SHALLOW    TRUE
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/game-items)
+
+add_subdirectory(vendored/SDL EXCLUDE_FROM_ALL)
+add_subdirectory(vendored/SDL_image EXCLUDE_FROM_ALL)
+
+# -----------------------
+# Your executable
+# -----------------------
+add_executable(main
+  main.cpp
+  Enemy.cpp
+  Player.cpp
+  Projectile.cpp
 )
 set(SDL_SHARED  OFF CACHE BOOL "" FORCE)   # build as static lib
 set(SDL_STATIC  ON  CACHE BOOL "" FORCE)
@@ -38,3 +44,6 @@ target_link_libraries(main
 )
  
 target_compile_options(main PRIVATE)
+
+# Link SDL3 + SDL3_image
+target_link_libraries(main PRIVATE SDL3::SDL3 SDL3_image::SDL3_image)

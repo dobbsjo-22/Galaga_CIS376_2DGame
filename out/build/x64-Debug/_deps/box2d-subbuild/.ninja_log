@@ -1,0 +1,21 @@
+# ninja log v6
+50	616	7939015090920146	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-mkdir	efcdb5224dccea33
+50	616	7939015090920146	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-mkdir	efcdb5224dccea33
+619	16554	7939015249765657	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-download	fc92e2f7db91bc2d
+619	16554	7939015249765657	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-download	fc92e2f7db91bc2d
+16554	18614	7939015250409481	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-update	b9f166a394452940
+16554	18614	7939015250409481	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-update	b9f166a394452940
+18615	18990	7939015274534488	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-patch	47c5f5ce3ec10acc
+18615	18990	7939015274534488	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-patch	47c5f5ce3ec10acc
+18991	19910	7939015283661946	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-configure	48e3293e6a14fb70
+18991	19910	7939015283661946	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-configure	48e3293e6a14fb70
+19911	20174	7939015286315566	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-build	d770b15a46416bae
+19911	20174	7939015286315566	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-build	d770b15a46416bae
+20175	20443	7939015289136295	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-install	3a2a7b16fa7e0656
+20175	20443	7939015289136295	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-install	3a2a7b16fa7e0656
+20444	20599	7939015290734804	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-test	ccbf628e15288242
+20444	20599	7939015290734804	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-test	ccbf628e15288242
+20600	20833	7939015293073113	CMakeFiles/box2d-populate-complete	5de50d0f47506098
+20600	20833	7939015293073113	box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-done	5de50d0f47506098
+20600	20833	7939015293073113	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/box2d-subbuild/CMakeFiles/box2d-populate-complete	5de50d0f47506098
+20600	20833	7939015293073113	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/box2d-subbuild/box2d-populate-prefix/src/box2d-populate-stamp/box2d-populate-done	5de50d0f47506098

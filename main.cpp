@@ -8,10 +8,10 @@
 
 // Helper function for collision
 bool checkCollision(SDL_FRect a, SDL_FRect b) {
-    return (a.x < b.x + b.w && 
+    return (a.x < b.x + b.w &&
             a.x + a.w > b.x &&
-            a.y < b.y + b.h && 
-            a.y + a.w > b.y);
+            a.y < b.y + b.h &&
+            a.y + a.h > b.y);
 }
 
 class GalagaGame {
@@ -20,12 +20,13 @@ public:
 
     bool init(const char* title, int width, int height) {
         if (!SDL_Init(SDL_INIT_VIDEO)) return false;
-        window = SDL_CreateWindow(title, width, height, 0);
+        window = SDL_CreateWindow(title, width, height, SDL_WINDOW_FULLSCREEN);
         renderer = SDL_CreateRenderer(window, NULL);
+        player.init(renderer, "player.png");
 
         // this makes the enemies
         for (int i = 0; i < 5; ++i) {
-            enemies.push_back(Enemy(150.0f + (i * 100.0f), 50.0f));
+            enemies.emplace_back(150.0f + (i * 100.0f), 50.0f, "enemy.png");
         }
 
         isRunning = true;
@@ -44,6 +45,7 @@ public:
             }
         }
     }
+
 
     void update() {
         // 1. Update Player (only if alive)
@@ -101,14 +103,25 @@ public:
         }
 
         // 6. Cleanup inactive bullets
-        bullets.erase(std::remove_if(bullets.begin(), bullets.end(), 
+        bullets.erase(std::remove_if(bullets.begin(), bullets.end(),
             [](const Projectile& b) { return !b.active; }), bullets.end());
+
+        int screenW = 0, screenH = 0;
+        SDL_GetRenderOutputSize(renderer, &screenW, &screenH);
 
         // 7. Enemy Swarm Movement Logic
         bool hitWall = false;
-        for (auto& e : enemies) {
-            // Check if any enemy touches the left (0) or right (800) bounds
-            if (e.rect.x <= 0 || e.rect.x >= 800 - e.rect.w) {
+        if (!enemies.empty()) {
+            float leftMost = enemies.front().rect.x;
+            float rightMost = enemies.front().rect.x + enemies.front().rect.w;
+
+            for (auto& e : enemies) {
+                leftMost = std::min(leftMost, e.rect.x);
+                rightMost = std::max(rightMost, e.rect.x + e.rect.w);
+            }
+
+            // Bounce if the formation hits either side of the screen
+            if (leftMost <= 0.0f || rightMost >= (float)screenW) {
                 hitWall = true;
                 break;
             }
@@ -136,11 +149,11 @@ public:
     void render() {
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         SDL_RenderClear(renderer);
-        
+
         player.render(renderer);
         for (auto& b : bullets) b.render(renderer);
         for (auto& e : enemies) e.render(renderer);
-        
+
         SDL_RenderPresent(renderer);
     }
 

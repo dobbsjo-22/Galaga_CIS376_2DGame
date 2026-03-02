@@ -1,0 +1,21 @@
+# ninja log v6
+8	486	7939013916494196	sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-mkdir	d00e1ba51d83bf22
+8	486	7939013916494196	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/sdl3-subbuild/sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-mkdir	d00e1ba51d83bf22
+487	55974	7939014471398875	sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-download	546c6885952f0d67
+487	55974	7939014471398875	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/sdl3-subbuild/sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-download	546c6885952f0d67
+55991	56290	7939014472021796	sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-update	1f8a0c4e55210909
+55991	56290	7939014472021796	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/sdl3-subbuild/sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-update	1f8a0c4e55210909
+56291	56453	7939014476385593	sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-patch	ec57c99d2ef85610
+56291	56453	7939014476385593	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/sdl3-subbuild/sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-patch	ec57c99d2ef85610
+56454	56543	7939014477363921	sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-configure	2f27e4d1552fa0f9
+56454	56543	7939014477363921	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/sdl3-subbuild/sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-configure	2f27e4d1552fa0f9
+56543	56635	7939014478325637	sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-build	7921fe8440c30725
+56543	56635	7939014478325637	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/sdl3-subbuild/sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-build	7921fe8440c30725
+56635	56707	7939014479037648	sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-install	50a577a28925c2ba
+56635	56707	7939014479037648	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/sdl3-subbuild/sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-install	50a577a28925c2ba
+56708	56801	7939014479941238	sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-test	943540a790a1a9d0
+56708	56801	7939014479941238	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/sdl3-subbuild/sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-test	943540a790a1a9d0
+56802	56962	7939014481582221	CMakeFiles/sdl3-populate-complete	e48dfd429e139698
+56802	56962	7939014481582221	sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-done	e48dfd429e139698
+56802	56962	7939014481582221	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/sdl3-subbuild/CMakeFiles/sdl3-populate-complete	e48dfd429e139698
+56802	56962	7939014481582221	C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/sdl3-subbuild/sdl3-populate-prefix/src/sdl3-populate-stamp/sdl3-populate-done	e48dfd429e139698

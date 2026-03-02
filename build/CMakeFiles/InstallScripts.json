@@ -1,10 +1,9 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/cmake_install.cmake",
-		"C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/sdl3-build/cmake_install.cmake",
-		"C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-build/cmake_install.cmake",
-		"C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/_deps/box2d-build/src/cmake_install.cmake"
+		"C:/Users/barth/Galaga_CIS376_2DGame/build/cmake_install.cmake",
+		"C:/Users/barth/Galaga_CIS376_2DGame/build/vendored/SDL/cmake_install.cmake",
+		"C:/Users/barth/Galaga_CIS376_2DGame/build/vendored/SDL_image/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

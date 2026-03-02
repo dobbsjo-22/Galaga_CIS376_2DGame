@@ -1,0 +1,39 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/CMakePushCheckState.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/CheckCCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/CheckLinkerFlag.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Compiler/MSVC.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/FindPNG.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/FindTIFF.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/FindZLIB.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Internal/CMakeCLinkerInformation.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Linker/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Linker/MSVC.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/SelectLibraryConfigurations.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/WriteBasicConfigVersionFile.cmake
+C:/Users/barth/Galaga_CIS376_2DGame/build/CMakeFiles/4.2.1/CMakeCCompiler.cmake
+C:/Users/barth/Galaga_CIS376_2DGame/build/CMakeFiles/cmake.verify_globs
+C:/Users/barth/Galaga_CIS376_2DGame/vendored/SDL_image/CMakeLists.txt
+C:/Users/barth/Galaga_CIS376_2DGame/vendored/SDL_image/cmake/Findwebp.cmake
+C:/Users/barth/Galaga_CIS376_2DGame/vendored/SDL_image/cmake/GetGitRevisionDescription.cmake
+C:/Users/barth/Galaga_CIS376_2DGame/vendored/SDL_image/cmake/PrivateSdlFunctions.cmake
+C:/Users/barth/Galaga_CIS376_2DGame/vendored/SDL_image/cmake/sdlcpu.cmake
+C:/Users/barth/Galaga_CIS376_2DGame/vendored/SDL_image/cmake/sdlmanpages.cmake
+C:/Users/barth/Galaga_CIS376_2DGame/vendored/SDL_image/cmake/sdlplatform.cmake

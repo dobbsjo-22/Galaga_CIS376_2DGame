@@ -1,0 +1,106 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"out/build/x64-Debug/_deps/box2d-src/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 193,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 201,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 207,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 220,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"_deps/box2d-build/src/box2dd.lib"
+			],
+			"targetId" : "box2d::@20f5237e34ad7ded9806",
+			"targetIndex" : 3,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/box2d",
+			"exportName" : "box2dConfig",
+			"exportTargets" : 
+			[
+				{
+					"id" : "box2d::@20f5237e34ad7ded9806",
+					"index" : 3
+				}
+			],
+			"paths" : 
+			[
+				"_deps/box2d-build/src/CMakeFiles/Export/1f7e0de6fbfb5d20e365871ec89ce73e/box2dConfig.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "include/box2d",
+			"paths" : 
+			[
+				"out/build/x64-Debug/_deps/box2d-src/src/../include/box2d/base.h",
+				"out/build/x64-Debug/_deps/box2d-src/src/../include/box2d/box2d.h",
+				"out/build/x64-Debug/_deps/box2d-src/src/../include/box2d/collision.h",
+				"out/build/x64-Debug/_deps/box2d-src/src/../include/box2d/id.h",
+				"out/build/x64-Debug/_deps/box2d-src/src/../include/box2d/math_functions.h",
+				"out/build/x64-Debug/_deps/box2d-src/src/../include/box2d/types.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/box2d",
+			"paths" : 
+			[
+				"out/build/x64-Debug/_deps/box2d-build/src/box2dConfigVersion.cmake"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/box2d-build/src",
+		"source" : "out/build/x64-Debug/_deps/box2d-src/src"
+	}
+}

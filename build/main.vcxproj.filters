@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\main.cpp">
+    <ClCompile Include="C:\Users\barth\Galaga_CIS376_2DGame\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\Player.cpp">
+    <ClCompile Include="C:\Users\barth\Galaga_CIS376_2DGame\Enemy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\Enemy.cpp">
+    <ClCompile Include="C:\Users\barth\Galaga_CIS376_2DGame\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\Projectile.cpp">
+    <ClCompile Include="C:\Users\barth\Galaga_CIS376_2DGame\Projectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\josh.dobbs\Desktop\Schoo\376 Game\BouncingBalls\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\barth\Galaga_CIS376_2DGame\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{EC07BB91-2773-3F11-909C-38BD68EF164C}</UniqueIdentifier>
+      <UniqueIdentifier>{3CB77DAF-555E-307E-B97D-AF4B4360FFC4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
