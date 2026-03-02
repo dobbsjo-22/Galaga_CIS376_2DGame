@@ -5,10 +5,11 @@
 #include <string>
 #include <unordered_map>
 
+enum class ProjectileType { PLAYER, ENEMY };
+
 class Projectile {
 public:
-    Projectile(float x, float y);
-
+    Projectile(float x, float y, ProjectileType type);
     void update();
     void render(SDL_Renderer* renderer);
 
@@ -17,6 +18,7 @@ public:
 
 private:
     float speed;
+    ProjectileType type;
 
     // Sprite
     SDL_Texture* texture = nullptr;

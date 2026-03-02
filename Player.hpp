@@ -5,6 +5,8 @@
 #include <string>
 #include <unordered_map>
 
+enum class PlayerState { ALIVE, DYING, DEAD };
+
 class Player {
 public:
     Player();
@@ -16,8 +18,11 @@ public:
     void update();
     void render(SDL_Renderer* renderer);
 
-    bool wantsToShoot();
+    bool wantsToShoot(const SDL_Event& event);
+    void killPlayer();
 
+    PlayerState getState() const { return state; }
+  
     // For bullet spawn (center-top)
     float gunX() const { return rect.x + rect.w * 0.5f; }
     float gunY() const { return rect.y; }
@@ -29,6 +34,10 @@ private:
     float speed = 5.0f;
     float velocityX = 0.0f;
 
+    PlayerState state;
+    Uint64 deathStartTime;
+    const Uint64 deathDuration = 1500; // 1.5 seconds total
+  
     Uint64 lastShotMs = 0;
     Uint64 shotCooldownMs = 250;
 

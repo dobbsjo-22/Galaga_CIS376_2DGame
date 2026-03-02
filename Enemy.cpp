@@ -1,4 +1,5 @@
 #include "Enemy.hpp"
+#include <cstdlib>
 
 std::unordered_map<std::string, SDL_Texture*> Enemy::textureCache;
 
@@ -30,6 +31,8 @@ SDL_Texture* Enemy::getTexture(SDL_Renderer* renderer,const std::string& path) {
 Enemy::Enemy(float x, float y, const char* spritePath)
     : spritePath(spritePath)
 {
+    lastShootTime = SDL_GetTicks();
+    nextShootDelay = 1000 + (rand() % 4000);
     rect.x = x;
     rect.y = y;
     rect.w = 64.0f;
@@ -44,7 +47,6 @@ void Enemy::update(float speed) {
 }
 
 void Enemy::render(SDL_Renderer* renderer) {
-
     if (!texture) {
         texture = getTexture(renderer, spritePath);
     }
@@ -58,3 +60,14 @@ void Enemy::render(SDL_Renderer* renderer) {
         SDL_RenderFillRect(renderer, &rect);
     }
 }
+
+bool Enemy::tryToShoot() {
+    Uint64 currentTime = SDL_GetTicks();
+    if (currentTime > lastShootTime + nextShootDelay) {
+        lastShootTime = currentTime;
+        nextShootDelay = 1000 + (rand() % 4000); // Reset for next shot
+        return true;
+    }
+    return false;
+}
+

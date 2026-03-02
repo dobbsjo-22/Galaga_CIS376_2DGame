@@ -7,23 +7,25 @@
 #include <SDL3_image/SDL_image.h>
 
 class Enemy {
-public:
-    Enemy(float x, float y, const char* spritePath);
-    ~Enemy();
+    public:
+        Enemy(float x, float y, const char* spritePath);
+        ~Enemy();
+        void update(float velocityX);
+        void render(SDL_Renderer* renderer);
+        bool tryToShoot(); // Checks if it's time to fire
+        
+        SDL_FRect rect{};
 
-    void update(float speed);
-    void render(SDL_Renderer* renderer);
+    private:
+        Uint64 lastShootTime;
+        Uint64 nextShootDelay;
+        SDL_Texture* texture = nullptr;
+        std::string spritePath;
 
-    SDL_FRect rect{};
+        // Shared texture cache (load once, reuse)
+        static std::unordered_map<std::string, SDL_Texture*> textureCache;
 
-private:
-    SDL_Texture* texture = nullptr;
-    std::string spritePath;
-
-    // Shared texture cache (load once, reuse)
-    static std::unordered_map<std::string, SDL_Texture*> textureCache;
-
-    static SDL_Texture* getTexture(SDL_Renderer* renderer,const std::string& path);
+        static SDL_Texture* getTexture(SDL_Renderer* renderer,const std::string& path);
 };
 
 #endif

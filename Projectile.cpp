@@ -30,34 +30,40 @@ SDL_Texture* Projectile::getTexture(SDL_Renderer* renderer,const std::string& pa
     return tex;
 }
 
-Projectile::Projectile(float x, float y) {
-    // bullet size
+Projectile::Projectile(float x, float y, ProjectileType type) : type(type), active(true) {
     rect = { x - 5.0f, y, 20.0f, 20.0f };
-
-    speed = -7.0f; // move upward
+    
+    if (type == ProjectileType::PLAYER) {
+        speed = -7.0f; // Up
+    } else {
+        speed = 7.0f;  // Down
+    }
     active = true;
 }
 
 void Projectile::update() {
     rect.y += speed;
-
-    // deactivate if off-screen
+    
     if (rect.y + rect.h < 0) {
         active = false;
     }
 }
 
 void Projectile::render(SDL_Renderer* renderer) {
+    if (type == ProjectileType::PLAYER) {
+        if (!texture) {
+            texture = getTexture(renderer, spritePath);
+        }
 
-    if (!texture) {
-        texture = getTexture(renderer, spritePath);
-    }
-
-    if (texture) {
-        SDL_RenderTexture(renderer, texture, nullptr, &rect);
+        if (texture) {
+            SDL_RenderTexture(renderer, texture, nullptr, &rect);
+        } else {
+            // fallback debug rectangle
+            SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
+            SDL_RenderFillRect(renderer, &rect);
+        }
     } else {
-        // fallback debug rectangle
-        SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
-        SDL_RenderFillRect(renderer, &rect);
+        SDL_SetRenderDrawColor(renderer, 139, 0, 0, 255); // Dark Red
     }
+    SDL_RenderFillRect(renderer, &rect);
 }
