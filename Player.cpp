@@ -23,7 +23,6 @@ SDL_Texture* Player::getTexture(SDL_Renderer* renderer, const std::string& path)
         return nullptr;
     }
 
-    // Useful for PNG transparency
     SDL_SetTextureBlendMode(tex, SDL_BLENDMODE_BLEND);
 
     textureCache[path] = tex;
@@ -45,7 +44,6 @@ bool Player::init(SDL_Renderer* renderer, const char* spritePathIn) {
     rect.w = 64.0f;
     rect.h = 64.0f;
 
-    // Bottom-middle spawn (fullscreen-safe)
     rect.x = (screenW - rect.w) * 0.5f;
     rect.y = screenH - rect.h;
 
@@ -54,7 +52,6 @@ bool Player::init(SDL_Renderer* renderer, const char* spritePathIn) {
 }
 
 void Player::handleInput(const SDL_Event&) {
-    // Held-key movement (smooth, simple)
     const bool* keys = SDL_GetKeyboardState(nullptr);
 
     if (keys[SDL_SCANCODE_LEFT] || keys[SDL_SCANCODE_A]) {
@@ -85,7 +82,6 @@ void Player::render(SDL_Renderer* renderer) {
     if (state == PlayerState::DEAD) return;
 
     if (state == PlayerState::DYING) {
-        // Blink logic: visible every other 250ms
         if ((SDL_GetTicks() / 250) % 2 == 0) {
             SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
             SDL_RenderFillRect(renderer, &rect);
@@ -93,7 +89,6 @@ void Player::render(SDL_Renderer* renderer) {
         return;
     }
 
-    // Alive
     if (texture) {
         SDL_RenderTexture(renderer, texture, nullptr, &rect);
     } else {

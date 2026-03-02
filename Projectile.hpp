@@ -22,11 +22,9 @@ private:
     float speed;
     ProjectileType type;
 
-    // Sprite
     SDL_Texture* texture = nullptr;
     std::string spritePath = "bullet.png";
 
-    // Shared texture cache
     static std::unordered_map<std::string, SDL_Texture*> textureCache;
     static SDL_Texture* getTexture(SDL_Renderer* renderer,const std::string& path);
 };

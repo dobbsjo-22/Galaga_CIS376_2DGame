@@ -47,7 +47,7 @@ void Projectile::update() {
     if (rect.y + rect.h < 0) {
         active = false;
     }
-    if (rect.y > 2000.0f) { // quick safety
+    if (rect.y > 2000.0f) { 
         active = false;
     }
 }

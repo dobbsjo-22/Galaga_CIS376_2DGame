@@ -6,7 +6,6 @@
 #include "Score.hpp"
 #include <algorithm>
 
-// Helper function for collision
 bool checkCollision(SDL_FRect a, SDL_FRect b) {
     return (a.x < b.x + b.w &&
             a.x + a.w > b.x &&
@@ -24,7 +23,7 @@ public:
         renderer = SDL_CreateRenderer(window, NULL);
         player.init(renderer, "player.png");
 
-        // this makes the enemies
+        // spawn enemies
         for (int i = 0; i < 5; ++i) {
             enemies.emplace_back(150.0f + (i * 100.0f), 50.0f, "enemy.png");
         }
@@ -33,17 +32,14 @@ public:
         return true;
     }
 
-    // this handles the player inputs and the programming shutting down
     void handleEvents() {
         SDL_Event event;
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_EVENT_QUIT) isRunning = false;
         }
 
-        // held-key movement
-        player.handleInput(event); // event param unused; ok for now
+        player.handleInput(event); 
 
-        // held-key shooting with cooldown
         if (player.wantsToShoot()) {
             bullets.push_back(Projectile(player.getRect().x, player.getRect().y, ProjectileType::PLAYER));
         }
@@ -51,41 +47,37 @@ public:
 
 
     void update() {
-        // 1. Update Player (only if alive)
         if (player.getState() == PlayerState::ALIVE) {
             player.update();
         }
 
-        // 2. Enemy Shooting Logic
         for (auto& e : enemies) {
             if (e.tryToShoot()) {
                 bullets.push_back(Projectile(e.rect.x, e.rect.y, ProjectileType::ENEMY));
             }
         }
 
-        // 3. Update all Bullets
         for (auto& b : bullets) {
             b.update();
         }
 
-        // 4. Collision Handling
+        // Collision handling
         for (auto& b : bullets) {
             if (!b.active) continue; // Skip bullets already spent this frame
 
-            // PLAYER BULLETS vs ENEMIES
             if (b.getType() == ProjectileType::PLAYER) {
                 for (auto it = enemies.begin(); it != enemies.end(); ) {
                     if (checkCollision(b.rect, it->rect)) {
-                        b.active = false;          // Mark bullet for deletion
-                        it = enemies.erase(it);    // Remove enemy and update iterator
-                        score.addPoints(10);       // Add points
-                        break;                     // Stop checking THIS bullet; it's gone
+                        b.active = false;
+                        it = enemies.erase(it);    
+                        score.addPoints(10);       
+                        break;                    
                     } else {
                         ++it;
                     }
                 }
             }
-            // ENEMY BULLETS vs PLAYER
+            
             else if (b.getType() == ProjectileType::ENEMY && player.getState() == PlayerState::ALIVE) {
                 if (checkCollision(b.rect, player.getRect())) {
                     b.active = false;
@@ -94,25 +86,21 @@ public:
             }
         }
 
-        // 5. PLAYER vs ENEMY SHIP (Body Crash)
         if (player.getState() == PlayerState::ALIVE) {
             for (auto& e : enemies) {
                 if (checkCollision(player.getRect(), e.rect)) {
                     player.killPlayer();
-                    // Optional: You could also destroy the enemy ship here
                     break; 
                 }
             }
         }
 
-        // 6. Cleanup inactive bullets
         bullets.erase(std::remove_if(bullets.begin(), bullets.end(),
             [](const Projectile& b) { return !b.active; }), bullets.end());
 
         int screenW = 0, screenH = 0;
         SDL_GetRenderOutputSize(renderer, &screenW, &screenH);
 
-        // 7. Enemy Swarm Movement Logic
         bool hitWall = false;
         if (!enemies.empty()) {
             float leftMost = enemies.front().rect.x;

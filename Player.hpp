@@ -11,7 +11,6 @@ class Player {
 public:
     Player();
 
-    // Call once after renderer is created (in your game's init)
     bool init(SDL_Renderer* renderer, const char* spritePath);
 
     void handleInput(const SDL_Event& event);
@@ -41,15 +40,12 @@ private:
     Uint64 lastShotMs = 0;
     Uint64 shotCooldownMs = 250;
 
-    // Screen bounds (fullscreen-safe)
     float screenW = 800.0f;
     float screenH = 600.0f;
 
-    // Sprite
     SDL_Texture* texture = nullptr;
     std::string spritePath;
 
-    // Shared cache (load once)
     static std::unordered_map<std::string, SDL_Texture*> textureCache;
     static SDL_Texture* getTexture(SDL_Renderer* renderer, const std::string& path);
 };

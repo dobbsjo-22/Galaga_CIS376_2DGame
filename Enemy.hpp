@@ -12,7 +12,7 @@ class Enemy {
         ~Enemy();
         void update(float velocityX);
         void render(SDL_Renderer* renderer);
-        bool tryToShoot(); // Checks if it's time to fire
+        bool tryToShoot();
         
         SDL_FRect rect{};
 
@@ -22,7 +22,7 @@ class Enemy {
         SDL_Texture* texture = nullptr;
         std::string spritePath;
 
-        // Shared texture cache (load once, reuse)
+        // Shared texture cache that we can load once and reuse
         static std::unordered_map<std::string, SDL_Texture*> textureCache;
 
         static SDL_Texture* getTexture(SDL_Renderer* renderer,const std::string& path);
