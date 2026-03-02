@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/cmake_install.cmake",
+		"C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/sdl3-build/cmake_install.cmake",
+		"C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/box2d-build/cmake_install.cmake",
+		"C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/box2d-build/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

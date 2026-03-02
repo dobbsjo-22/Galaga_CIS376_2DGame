@@ -1,6 +1,6 @@
-^C:\USERS\JOSH.DOBBS\DESKTOP\SCHOO\376 GAME\BOUNCINGBALLS\BUILD\CMAKEFILES\69ED09F4C18B03F02759F33268079779\GENERATE.STAMP.RULE
+^C:\USERS\BARTH\GALAGA_CIS376_2DGAME\BUILD\CMAKEFILES\8DA5A96460A180293CD037104CBE87DB\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls" "-BC:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/josh.dobbs/Desktop/Schoo/376 Game/BouncingBalls/build/BouncingBalls.sln"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/barth/Galaga_CIS376_2DGame -BC:/Users/barth/Galaga_CIS376_2DGame/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/barth/Galaga_CIS376_2DGame/build/Galaga_CIS376_2DGame.slnx
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

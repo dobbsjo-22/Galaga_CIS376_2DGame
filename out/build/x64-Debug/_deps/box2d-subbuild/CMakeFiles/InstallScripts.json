@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/barth/Galaga_CIS376_2DGame/out/build/x64-Debug/_deps/box2d-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
