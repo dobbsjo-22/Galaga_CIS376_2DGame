@@ -18,7 +18,7 @@ public:
     void update();
     void render(SDL_Renderer* renderer);
 
-    bool wantsToShoot(const SDL_Event& event);
+    bool wantsToShoot();
     void killPlayer();
 
     PlayerState getState() const { return state; }

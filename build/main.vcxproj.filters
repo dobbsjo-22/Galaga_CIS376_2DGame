@@ -13,6 +13,9 @@
     <ClCompile Include="C:\Users\barth\Galaga_CIS376_2DGame\Projectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\barth\Galaga_CIS376_2DGame\Score.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\barth\Galaga_CIS376_2DGame\CMakeLists.txt" />

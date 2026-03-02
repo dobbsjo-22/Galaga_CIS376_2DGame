@@ -16,6 +16,8 @@ public:
     SDL_FRect rect{};
     bool active;
 
+    ProjectileType getType() const { return type; }
+
 private:
     float speed;
     ProjectileType type;

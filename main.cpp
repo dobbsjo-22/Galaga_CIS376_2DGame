@@ -38,11 +38,14 @@ public:
         SDL_Event event;
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_EVENT_QUIT) isRunning = false;
-            player.handleInput(event);
-            
-            if (player.wantsToShoot(event)) {
-                bullets.push_back(Projectile(player.getRect().x, player.getRect().y, ProjectileType::PLAYER));
-            }
+        }
+
+        // held-key movement
+        player.handleInput(event); // event param unused; ok for now
+
+        // held-key shooting with cooldown
+        if (player.wantsToShoot()) {
+            bullets.push_back(Projectile(player.getRect().x, player.getRect().y, ProjectileType::PLAYER));
         }
     }
 
@@ -70,7 +73,7 @@ public:
             if (!b.active) continue; // Skip bullets already spent this frame
 
             // PLAYER BULLETS vs ENEMIES
-            if (b.type == ProjectileType::PLAYER) {
+            if (b.getType() == ProjectileType::PLAYER) {
                 for (auto it = enemies.begin(); it != enemies.end(); ) {
                     if (checkCollision(b.rect, it->rect)) {
                         b.active = false;          // Mark bullet for deletion
@@ -83,7 +86,7 @@ public:
                 }
             }
             // ENEMY BULLETS vs PLAYER
-            else if (b.type == ProjectileType::ENEMY && player.getState() == PlayerState::ALIVE) {
+            else if (b.getType() == ProjectileType::ENEMY && player.getState() == PlayerState::ALIVE) {
                 if (checkCollision(b.rect, player.getRect())) {
                     b.active = false;
                     player.killPlayer();
@@ -123,7 +126,6 @@ public:
             // Bounce if the formation hits either side of the screen
             if (leftMost <= 0.0f || rightMost >= (float)screenW) {
                 hitWall = true;
-                break;
             }
         }
 

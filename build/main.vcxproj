@@ -368,6 +368,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\barth\Galaga_CIS376_2DGame\Enemy.cpp" />
     <ClCompile Include="C:\Users\barth\Galaga_CIS376_2DGame\Player.cpp" />
     <ClCompile Include="C:\Users\barth\Galaga_CIS376_2DGame\Projectile.cpp" />
+    <ClCompile Include="C:\Users\barth\Galaga_CIS376_2DGame\Score.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

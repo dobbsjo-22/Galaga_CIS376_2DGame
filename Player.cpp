@@ -70,7 +70,8 @@ void Player::update() {
     if (state == PlayerState::ALIVE) {
         rect.x += velocityX;
         if (rect.x < 0) rect.x = 0;
-        if (rect.x > 800 - rect.w) rect.x = 800 - rect.w;
+        float maxX = screenW - rect.w;
+        if (rect.x > maxX) rect.x = maxX;
     } 
     else if (state == PlayerState::DYING) {
         // Check if 1.5 seconds have passed
@@ -84,21 +85,19 @@ void Player::render(SDL_Renderer* renderer) {
     if (state == PlayerState::DEAD) return;
 
     if (state == PlayerState::DYING) {
-        // Blink logic: Change color every 250ms
-        // (CurrentTime / 250) % 2 will alternate between 0 and 1
+        // Blink logic: visible every other 250ms
         if ((SDL_GetTicks() / 250) % 2 == 0) {
-            SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255); // Red blink
+            SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
             SDL_RenderFillRect(renderer, &rect);
         }
-        // If 1, we draw nothing (invisible blink)
+        return;
+    }
+
+    // Alive
+    if (texture) {
+        SDL_RenderTexture(renderer, texture, nullptr, &rect);
     } else {
-        // Normal Alive State
-        if (texture) {
-            SDL_RenderTexture(renderer, texture, nullptr, &rect);
-        } else {
-            // fallback: visible white rect if sprite failed to load
-            SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-        }
+        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
         SDL_RenderFillRect(renderer, &rect);
     }
 }
@@ -110,9 +109,13 @@ void Player::killPlayer() {
     }
 }
 
-bool Player::wantsToShoot(const SDL_Event& event) {
-    if (event.type == SDL_EVENT_KEY_DOWN && event.key.key == SDLK_SPACE) {
-        return true;
-    }
-    return false;
+bool Player::wantsToShoot() {
+    const bool* keys = SDL_GetKeyboardState(nullptr);
+    if (!keys[SDL_SCANCODE_SPACE]) return false;
+
+    Uint64 now = SDL_GetTicks();
+    if (now - lastShotMs < shotCooldownMs) return false;
+
+    lastShotMs = now;
+    return true;
 }

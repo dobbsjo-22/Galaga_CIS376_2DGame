@@ -43,8 +43,11 @@ Projectile::Projectile(float x, float y, ProjectileType type) : type(type), acti
 
 void Projectile::update() {
     rect.y += speed;
-    
+
     if (rect.y + rect.h < 0) {
+        active = false;
+    }
+    if (rect.y > 2000.0f) { // quick safety
         active = false;
     }
 }
@@ -58,12 +61,11 @@ void Projectile::render(SDL_Renderer* renderer) {
         if (texture) {
             SDL_RenderTexture(renderer, texture, nullptr, &rect);
         } else {
-            // fallback debug rectangle
             SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
             SDL_RenderFillRect(renderer, &rect);
         }
     } else {
-        SDL_SetRenderDrawColor(renderer, 139, 0, 0, 255); // Dark Red
+        SDL_SetRenderDrawColor(renderer, 139, 0, 0, 255);
+        SDL_RenderFillRect(renderer, &rect);
     }
-    SDL_RenderFillRect(renderer, &rect);
 }
