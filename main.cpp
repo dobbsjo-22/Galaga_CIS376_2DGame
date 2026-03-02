@@ -3,6 +3,7 @@
 #include "Player.hpp"
 #include "Enemy.hpp"
 #include "Projectile.hpp"
+#include "Score.hpp"
 #include <algorithm>
 
 // Helper function for collision
@@ -39,50 +40,97 @@ public:
             player.handleInput(event);
             
             if (player.wantsToShoot(event)) {
-                bullets.push_back(Projectile(player.getRect().x, player.getRect().y));
+                bullets.push_back(Projectile(player.getRect().x, player.getRect().y, ProjectileType::PLAYER));
             }
         }
     }
 
     void update() {
-        player.update();
+        // 1. Update Player (only if alive)
+        if (player.getState() == PlayerState::ALIVE) {
+            player.update();
+        }
 
-        // update bullets
-        for (auto& b : bullets) b.update();
+        // 2. Enemy Shooting Logic
+        for (auto& e : enemies) {
+            if (e.tryToShoot()) {
+                bullets.push_back(Projectile(e.rect.x, e.rect.y, ProjectileType::ENEMY));
+            }
+        }
 
-        // check Collisions (Bullet vs Enemy)
+        // 3. Update all Bullets
         for (auto& b : bullets) {
-            for (auto it = enemies.begin(); it != enemies.end(); ) {
-                if (checkCollision(b.rect, it->rect)) {
-                    b.active = false;          // Kill bullet
-                    it = enemies.erase(it);    // Kill enemy
-                } else {
-                    ++it;
+            b.update();
+        }
+
+        // 4. Collision Handling
+        for (auto& b : bullets) {
+            if (!b.active) continue; // Skip bullets already spent this frame
+
+            // PLAYER BULLETS vs ENEMIES
+            if (b.type == ProjectileType::PLAYER) {
+                for (auto it = enemies.begin(); it != enemies.end(); ) {
+                    if (checkCollision(b.rect, it->rect)) {
+                        b.active = false;          // Mark bullet for deletion
+                        it = enemies.erase(it);    // Remove enemy and update iterator
+                        score.addPoints(10);       // Add points
+                        break;                     // Stop checking THIS bullet; it's gone
+                    } else {
+                        ++it;
+                    }
+                }
+            }
+            // ENEMY BULLETS vs PLAYER
+            else if (b.type == ProjectileType::ENEMY && player.getState() == PlayerState::ALIVE) {
+                if (checkCollision(b.rect, player.getRect())) {
+                    b.active = false;
+                    player.killPlayer();
                 }
             }
         }
 
-        // this does a cleanup on inactive bullets
+        // 5. PLAYER vs ENEMY SHIP (Body Crash)
+        if (player.getState() == PlayerState::ALIVE) {
+            for (auto& e : enemies) {
+                if (checkCollision(player.getRect(), e.rect)) {
+                    player.killPlayer();
+                    // Optional: You could also destroy the enemy ship here
+                    break; 
+                }
+            }
+        }
+
+        // 6. Cleanup inactive bullets
         bullets.erase(std::remove_if(bullets.begin(), bullets.end(), 
             [](const Projectile& b) { return !b.active; }), bullets.end());
 
-        // this changes the direction of the enemy group forcing the whole group to start moving the opposite way
+        // 7. Enemy Swarm Movement Logic
         bool hitWall = false;
         for (auto& e : enemies) {
+            // Check if any enemy touches the left (0) or right (800) bounds
             if (e.rect.x <= 0 || e.rect.x >= 800 - e.rect.w) {
                 hitWall = true;
                 break;
             }
         }
+
         if (hitWall) {
-            enemySpeed *= -1;
-            // Nudge them away from the wall so they dont get stuck
-            for (auto& e : enemies) e.rect.x += enemySpeed;
+            enemySpeed *= -1; // Reverse direction
+            // Nudge all enemies once so they don't trigger "hitWall" again immediately
+            for (auto& e : enemies) {
+                e.rect.x += enemySpeed;
+            }
         }
 
+        // Apply movement to all enemies
         for (auto& e : enemies) {
             e.update(enemySpeed);
         }
+    }
+
+    void updateWindowTitle() {
+        std::string title = "Galaga - " + score.getScoreString();
+        SDL_SetWindowTitle(window, title.c_str());
     }
 
     void render() {
@@ -109,6 +157,7 @@ private:
     SDL_Renderer* renderer;
     bool isRunning;
     Player player;
+    Score score;
     
     std::vector<Enemy> enemies;
     float enemySpeed;

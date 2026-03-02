@@ -29,7 +29,7 @@ set(BOX2D_UNIT_TESTS OFF CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(box2d)
  
 # Executable 
-add_executable(main main.cpp Player.cpp Enemy.cpp Projectile.cpp)
+add_executable(main main.cpp Player.cpp Enemy.cpp Projectile.cpp Score.cpp)
  
 target_link_libraries(main
     PRIVATE

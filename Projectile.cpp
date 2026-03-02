@@ -1,21 +1,25 @@
 #include "Projectile.hpp"
 
-Projectile::Projectile(float x, float y) {
-    // center the bullet on the player (Player width is 50, bullet is 10)
-    rect = { x + 20.0f, y, 10.0f, 20.0f }; 
-    speed = -7.0f; // negative moves UP in SDL coordinates bc cords start at top left
-    active = true;
+Projectile::Projectile(float x, float y, ProjectileType type) : type(type), active(true) {
+    rect = { x + 20.0f, y, 10.0f, 20.0f };
+    
+    if (type == ProjectileType::PLAYER) {
+        speed = -7.0f; // Up
+    } else {
+        speed = 7.0f;  // Down
+    }
 }
 
 void Projectile::update() {
     rect.y += speed;
-    // deactivate if it flies off the top of the screen
-    if (rect.y + rect.h < 0) {
-        active = false;
-    }
+    if (rect.y < -50 || rect.y > 650) active = false; // Off-screen bounds
 }
 
 void Projectile::render(SDL_Renderer* renderer) {
-    SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
+    if (type == ProjectileType::PLAYER) {
+        SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); // Green
+    } else {
+        SDL_SetRenderDrawColor(renderer, 139, 0, 0, 255); // Dark Red
+    }
     SDL_RenderFillRect(renderer, &rect);
 }
